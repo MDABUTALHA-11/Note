@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    border-bottom: 0;
+}
+
+.tagline {
+    color: #f8f9fa;
+    font-style: italic;
+}
+
+.photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.social-media a {
+    font-size: 24px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    color: #0056b3;
+}

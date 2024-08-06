@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Section</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Upload.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patua+One&display=swap" rel="stylesheet">
+
+</head>
+<body style="font-family: Lilita One ;">
+    <div class="container my-5">
+        <div class="card">
+            <div class="card-header text-center">
+                <h1>Profile</h1>
+                <p class="tagline">I'm a creative [your profession] developer</p>
+            </div>
+            <div class="card-body row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p id="about-me-text">Write a short paragraph describing your professional background and skills. You can include some personal touches to make it more engaging.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <div class="photo mb-3">
+                        <img id="profile-image" src="default-photo.jpg" alt="Your Name" class="rounded-circle img-fluid">
+                    </div>
+                    <h2>Details</h2>
+                    <ul class="list-unstyled">
+                        <li><strong>Name:</strong> <span id="name">Your Name</span></li>
+                        <li><strong>Age:</strong> <span id="age">Your Age</span></li>
+                        <li><strong>Location:</strong> <span id="location">Your Location</span></li>
+                    </ul>
+                    <div class="social-media">
+                        <a href="https://facebook.com" target="_blank" class="mx-2"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="mx-2"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <form id="upload-form" class="mt-4">
+                        <div class="form-group">
+                            <input type="file" id="upload-photo" accept="image/*" class="form-control-file">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="input-name" placeholder="Enter your name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="number" id="input-age" placeholder="Enter your age" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="input-location" placeholder="Enter your location" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="input-about-me" placeholder="Write about yourself" class="form-control"></textarea>
+                        </div>
+                        <button type="button" onclick="updateProfile()" class="btn btn-primary btn-block">Update Profile</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="Upload.js"></script>
+</body>
+</html>

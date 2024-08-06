@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Notepad App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Patua+One&display=swap" rel="stylesheet">
+
+</head>
+<body style="font-family:Lilita One  ;">
+
+<div>
+    <div class="d-inline-flex p-2 bd-highlight"><a href="Upload.html"><button type="button" class="btn btn-warning">Upload Profile</button></a></div>
+      
+     
+</div>
+
+    <div class="container-fluid d-flex">
+        <!-- Sidebar -->
+        <div class="sidebar bg-dark text-white p-3">
+            <h3 class="mb-4">Notepad</h3>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" onclick="showSection('notes')">Notes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="showSection('trash')">Trash</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content flex-fill p-3">
+            <div id="noteInputSection" class="mb-4">
+                <div class="form-group">
+                    <textarea id="noteText" class="form-control" rows="4" placeholder="Take a note..."></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="noteLabel" class="form-control" placeholder="Add label (optional)">
+                </div>
+                <div class="color-picker mb-3">
+                    <label class="btn color-btn" style="background-color: #ffffff;" onclick="selectColor('#ffffff')"></label>
+                    <label class="btn color-btn" style="background-color: #f28b82;" onclick="selectColor('#f28b82')"></label>
+                    <label class="btn color-btn" style="background-color: #fbbc04;" onclick="selectColor('#fbbc04')"></label>
+                    <label class="btn color-btn" style="background-color: #ccff90;" onclick="selectColor('#ccff90')"></label>
+                    <label class="btn color-btn" style="background-color: #a7ffeb;" onclick="selectColor('#a7ffeb')"></label>
+                    <label class="btn color-btn" style="background-color: #aecbfa;" onclick="selectColor('#aecbfa')"></label>
+                    <label class="btn color-btn" style="background-color: #ba08f0;" onclick="selectColor('#aecbfa')"></label>
+                    <label class="btn color-btn" style="background-color: #f80505;" onclick="selectColor('#aecbfa')"></label>
+                    <label class="btn color-btn" style="background-color: #45fd07;" onclick="selectColor('#aecbfa')"></label>
+                </div>
+                <div class="image-upload mb-3">
+                    <label for="imageInput" class="btn btn-outline-secondary">
+                        <i class="fas fa-image"></i> Upload Image
+                    </label>
+                    <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="previewImage(event)">
+                    <img id="imagePreview" src="" alt="Image Preview" class="img-fluid mt-2" style="display: none;">
+                </div>
+                <button class="btn btn-primary" onclick="addNote()">Add Note</button>
+            </div>
+            <div id="notesSection" class="row"></div>
+            <div id="trashSection" class="row" style="display: none;"></div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script src="js.js"></script>
+
+
+    
+
+</body>
+</html>
